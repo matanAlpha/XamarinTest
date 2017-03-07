@@ -1,6 +1,7 @@
 ﻿using System;
 
 using UIKit;
+using Foundation;
 
 namespace XamarinTest.iOS
 {
@@ -36,5 +37,28 @@ namespace XamarinTest.iOS
 			base.DidReceiveMemoryWarning();
 			// Release any cached data, images, etc that aren't in use.		
 		}
+
+
+		public override void PrepareForSegue(UIStoryboardSegue segue, NSObject sender)
+		{
+			base.PrepareForSegue(segue, sender);
+
+	
+
+			//Set up Destination View Controller
+			if (segue.Identifier == "loginSegue")
+			{
+				var itvc = (MyViewController)segue.DestinationViewController;
+				if (itvc != null)
+				{
+					itvc.labelTPass = "New label";
+
+				}
+			}
+
+
+		}
+
+
 	}
 }
