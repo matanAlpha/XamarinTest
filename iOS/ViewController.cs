@@ -46,7 +46,7 @@ namespace XamarinTest.iOS
 	
 
 			//Set up Destination View Controller
-			if (segue.Identifier == "loginSegue")
+			if (segue.Identifier == "nextSegue")
 			{
 				var itvc = (MyViewController)segue.DestinationViewController;
 				if (itvc != null)
